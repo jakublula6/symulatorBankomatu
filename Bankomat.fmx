@@ -98,12 +98,12 @@ object Form1: TForm1
       TextSettings.Font.Size = 28.000000000000000000
       TextSettings.HorzAlign = Center
       Visible = False
-      TabOrder = 2
+      TabOrder = 5
     end
     object Edit1: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       Align = Center
-      TabOrder = 3
+      TabOrder = 6
       Password = True
       TextSettings.HorzAlign = Center
       Size.Width = 169.000000000000000000
@@ -121,6 +121,39 @@ object Form1: TForm1
       TextSettings.HorzAlign = Center
       Visible = False
       TabOrder = 1
+    end
+    object Label4: TLabel
+      StyledSettings = [Family, Style, FontColor]
+      Position.Y = 80.000000000000000000
+      Size.Width = 513.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 28.000000000000000000
+      TextSettings.HorzAlign = Center
+      Visible = False
+      TabOrder = 4
+    end
+    object Label5: TLabel
+      StyledSettings = [Family, Style, FontColor]
+      Position.Y = 160.000000000000000000
+      Size.Width = 513.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 28.000000000000000000
+      TextSettings.HorzAlign = Center
+      Visible = False
+      TabOrder = 3
+    end
+    object Label6: TLabel
+      StyledSettings = [Family, Style, FontColor]
+      Position.Y = 248.000000000000000000
+      Size.Width = 513.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 28.000000000000000000
+      TextSettings.HorzAlign = Center
+      Visible = False
+      TabOrder = 2
     end
   end
   object Label1: TLabel

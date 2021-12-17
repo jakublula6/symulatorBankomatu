@@ -6,7 +6,7 @@ class Account
         String pin;
         int pinAtempts;
         int maxWithdraw;
-        int withdrawed;
+        int withdrawed = 0;;
         int accountBalance;
         void shouldBlock();
     public:

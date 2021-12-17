@@ -31,7 +31,7 @@ bool Account::isPinCorrect(String enteredPin)
 }
 bool Account::isLowerThanLimit(int request)
 {
-    if (request <= maxWithdraw && request <= withdrawed)
+    if (request <= (maxWithdraw - withdrawed))
     {
         return true;
     }   

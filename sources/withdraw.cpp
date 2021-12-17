@@ -1,4 +1,4 @@
-#include "withdraw.h"
+﻿#include "withdraw.h"
 void Withdraw::setState(int b_500, int b_200, int b_100, int b_50, int b_20, int b_10)
 {
     billsAvabile.fifeHundred = b_500;
@@ -15,7 +15,7 @@ bool Withdraw:: isCorrect(int value)
     else
         return false;
 }
-int Withdraw:: handleWithdrawed(int value)
+void Withdraw:: handleWithdraw(int value)
 {
     if (value > 500 && billsAvabile.fifeHundred - value / 500 >= 0)
     {
