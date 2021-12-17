@@ -46,6 +46,7 @@ void TForm1:: pinScene()
 {
 	Label2 -> Visible = true;
 	Edit1 -> Visible = true;
+    Edit1 -> Password = true;
 	Label2 -> Text = "Podaj Pin:";
 	Button4 -> Text = "Popraw";
 	Button8 -> Text = "ZatwierdŸ";
@@ -165,10 +166,13 @@ void __fastcall TForm1::Button6Click(TObject *Sender)
 void __fastcall TForm1::Button7Click(TObject *Sender)
 {
 //
-	clear();
-	scene = 1;
-    Button3 -> Text = "";
-    pinScene();
+	if(scene != 1)
+	{
+        clear();
+		scene = 1;
+		Button3 -> Text = "";
+		pinScene();
+    }
 }
 //---------------------------------------------------------------------------
 

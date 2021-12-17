@@ -15,7 +15,8 @@ class Withdraw
         bills billsWithdrawed {};
         bool isCorrect(int value);
         void handleWithdraw(int value);
-        void setState(int b_500, int b_200, int b_100, int b_50, int b_20, int b_10);
+		void setState(int b_500, int b_200, int b_100, int b_50, int b_20, int b_10);
+        void resetWithdrawed();
     private:
         bills billsAvabile;
 };

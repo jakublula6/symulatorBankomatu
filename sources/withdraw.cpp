@@ -15,39 +15,49 @@ bool Withdraw:: isCorrect(int value)
     else
         return false;
 }
+void Withdraw:: resetWithdrawed()
+{
+   billsWithdrawed.fifeHundred = 0;
+   billsWithdrawed.twoHundred = 0;
+   billsWithdrawed.hundred = 0;
+   billsWithdrawed.fifty = 0;
+   billsWithdrawed.twenty = 0;
+   billsWithdrawed.ten = 0;
+}
 void Withdraw:: handleWithdraw(int value)
 {
-    if (value > 500 && billsAvabile.fifeHundred - value / 500 >= 0)
+    resetWithdrawed();
+	if (value >= 500 && billsAvabile.fifeHundred - value / 500 >= 0)
     {
-        billsWithdrawed.fifeHundred = value / 500;
+		billsWithdrawed.fifeHundred = value / 500;
         value = value - billsWithdrawed.fifeHundred * 500;
         billsAvabile.fifeHundred = billsAvabile.fifeHundred - billsWithdrawed.fifeHundred;
     }
-    if (value > 200 && billsAvabile.twoHundred - value / 200 >= 0)
+	if (value >= 200 && billsAvabile.twoHundred - value / 200 >= 0)
     {
-        billsWithdrawed.twoHundred = value / 200;
+		billsWithdrawed.twoHundred = value / 200;
         value = value - billsWithdrawed.twoHundred * 200;
         billsAvabile.twoHundred = billsAvabile.twoHundred - billsWithdrawed.twoHundred;
     }
-    if (value > 100 && billsAvabile.hundred - value / 100 >= 0)
+	if (value >= 100 && billsAvabile.hundred - value / 100 >= 0)
     {
         billsWithdrawed.hundred = value / 100;
         value = value - billsWithdrawed.hundred * 100;
         billsAvabile.hundred = billsAvabile.hundred - billsWithdrawed.hundred;
     }
-    if (value > 50 && billsAvabile.fifty - value / 50 >= 0)
+	if (value >= 50 && billsAvabile.fifty - value / 50 >= 0)
     {
         billsWithdrawed.fifty = value / 50;
         value = value - billsWithdrawed.fifty * 50;
         billsAvabile.fifty = billsAvabile.fifty - billsWithdrawed.fifty;
     }
-    if (value > 20 && billsAvabile.twenty - value / 20 >= 0)
+	if (value >= 20 && billsAvabile.twenty - value / 20 >= 0)
     {
         billsWithdrawed.twenty = value / 20;
         value = value - billsWithdrawed.twenty * 20;
         billsAvabile.twenty = billsAvabile.twenty - billsWithdrawed.twenty;
     }
-    if (value > 10 && billsAvabile.ten - value / 10 >= 0)
+	if (value >= 10 && billsAvabile.ten - value / 10 >= 0)
     {
         billsWithdrawed.ten = value / 10;
         value = value - billsWithdrawed.ten * 10;
