@@ -43,7 +43,7 @@ __published:	// IDE-managed Components
 	void __fastcall Button8Click(TObject *Sender);
 private:	// User declarations
 	int scene = 1;//Zmienna globalna odpowiedzialna za wybór odpowiedniej funkcji przycisków
-	Account user1;
+    Account user1;
 	Withdraw withdraw;
 	void clear();
 	void pinScene();

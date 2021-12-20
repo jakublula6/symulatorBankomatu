@@ -12,7 +12,8 @@ TForm1 *Form1;
 __fastcall TForm1::TForm1(TComponent* Owner)
 	: TForm(Owner)
 {
-	user1.setAccount("1234", 10000, 1200); //Inicjacja konta user1
+
+    withdraw.setState(100, 100, 100, 100,100,100);
 	pinScene(); //Uruchomienie sceny z wprowadzeniem pinu
 }
 //---------------------------------------------------------------------------
@@ -32,13 +33,20 @@ void TForm1:: clear()
 	Button4 -> Text = "";
 	Button5 -> Text = "";
 	Button6 -> Text = "";
-	Button7 -> Text = "";
+	Button7 -> Text = "WyjdŸ";
 	Button8 -> Text = "";
+	Label4 -> Visible = false;
+	Label5 -> Visible = false;
+	Label6 -> Visible = false;
+	Label4 -> Text = "";
+	Label5 -> Text = "";
+	Label6 -> Text = "";
 }
 void TForm1:: pinScene()
 {
 	Label2 -> Visible = true;
 	Edit1 -> Visible = true;
+    Edit1 -> Password = true;
 	Label2 -> Text = "Podaj Pin:";
 	Button4 -> Text = "Popraw";
 	Button8 -> Text = "ZatwierdŸ";
@@ -90,16 +98,17 @@ void TForm1:: withdrawScene()
 	withdraw.handleWithdraw(Edit1 ->Text.ToInt());
 	user1.handleWithdraw(Edit1 ->Text.ToInt());
 	Edit1 -> Visible = false;
+    Edit1-> Text = "";
 	Label2 -> Visible = true;
 	Label2 -> Text = "Wyp³acone Banknoty";
     Label4 -> Visible = true;
 	Label5 -> Visible = true;
 	Label6 -> Visible = true;
-	Label4 -> Text = "10: " + IntToStr(withdraw.billsWithdrawed.ten) + "20: " +
+	Label4 -> Text = "10: " + IntToStr(withdraw.billsWithdrawed.ten) + "  20: " +
 	IntToStr(withdraw.billsWithdrawed.twenty);
-	Label5 -> Text = "50: " + IntToStr(withdraw.billsWithdrawed.fifty) + "100: " +
+	Label5 -> Text = "50: " + IntToStr(withdraw.billsWithdrawed.fifty) + "  100: " +
 	IntToStr(withdraw.billsWithdrawed.hundred);
-	Label6 -> Text = "200: " + IntToStr(withdraw.billsWithdrawed.twoHundred) + "500: "
+	Label6 -> Text = "200: " + IntToStr(withdraw.billsWithdrawed.twoHundred) + "  500: "
 	+ IntToStr(withdraw.billsWithdrawed.fifeHundred);
 	//withdraw.billsWithdrawed.ten;
 }
@@ -157,6 +166,13 @@ void __fastcall TForm1::Button6Click(TObject *Sender)
 void __fastcall TForm1::Button7Click(TObject *Sender)
 {
 //
+	if(scene != 1)
+	{
+        clear();
+		scene = 1;
+		Button3 -> Text = "";
+		pinScene();
+    }
 }
 //---------------------------------------------------------------------------
 

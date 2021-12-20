@@ -62,8 +62,8 @@ void Account::resetLimit()
 }
 bool Account::changePin(String newPin)
 {
-    if (newPin != pin)
-    {
+	if (newPin != pin && newPin.Length()>0)
+	{
         pin = newPin;
         return true;
     }

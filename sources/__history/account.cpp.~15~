@@ -1,9 +1,15 @@
 ﻿#include "account.h"
+Account:: Account(std::string p, int max, int balance)
+{
+   	pin = p;
+	maxWithdraw = max;
+	accountBalance = balance;
+}
 void Account::setAccount(String p, int max, int balance)
 {
-    pin = p;
-    maxWithdraw = max;
-    accountBalance = balance;
+	pin = p;
+	maxWithdraw = max;
+	accountBalance = balance;
 }
 int Account::checkBalance()
 {
@@ -62,8 +68,8 @@ void Account::resetLimit()
 }
 bool Account::changePin(String newPin)
 {
-    if (newPin != pin && length(newPin>0)
-    {
+	if (newPin != pin && newPin.Length()>0)
+	{
         pin = newPin;
         return true;
     }

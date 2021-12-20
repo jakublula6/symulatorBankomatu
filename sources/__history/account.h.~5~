@@ -10,8 +10,7 @@ class Account
         int accountBalance;
         void shouldBlock();
 	public:
-        Account();
-		Account(String p, int max, int balance);
+		Account(string p, int max, int balance);
 		bool isBlocked = false;
 		int checkBalance();
 		void setAccount(String p, int max, int balance);

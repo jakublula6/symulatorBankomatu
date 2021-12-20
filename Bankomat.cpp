@@ -12,7 +12,7 @@ TForm1 *Form1;
 __fastcall TForm1::TForm1(TComponent* Owner)
 	: TForm(Owner)
 {
-	user1.setAccount("1234", 10000, 1200); //Inicjacja konta user1
+    user1.setAccount("1234", 10000, 1200); //Inicjacja konta user1
     withdraw.setState(100, 100, 100, 100,100,100);
 	pinScene(); //Uruchomienie sceny z wprowadzeniem pinu
 }
@@ -171,6 +171,7 @@ void __fastcall TForm1::Button7Click(TObject *Sender)
         clear();
 		scene = 1;
 		Button3 -> Text = "";
+        Button7 -> Text = "";
 		pinScene();
     }
 }

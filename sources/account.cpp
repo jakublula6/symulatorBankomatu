@@ -1,9 +1,19 @@
 ﻿#include "account.h"
+Account:: Account()
+{
+
+}
+Account:: Account(String p, int max, int balance)
+{
+	pin = p;
+	maxWithdraw = max;
+	accountBalance = balance;
+}
 void Account::setAccount(String p, int max, int balance)
 {
-    pin = p;
-    maxWithdraw = max;
-    accountBalance = balance;
+	pin = p;
+	maxWithdraw = max;
+	accountBalance = balance;
 }
 int Account::checkBalance()
 {
